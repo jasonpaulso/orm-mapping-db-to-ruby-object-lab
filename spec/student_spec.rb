@@ -170,8 +170,27 @@ describe Student do
       end
     end
 
-    describe '.all_students_in_grade_X' do
+    # ORGINAL TEST FOR #all_students_in_grade_X
+    # describe '.all_students_in_grade_X' do
+    #   it 'returns an array of all students in a given grade X' do
+    #     pat.name = "Pat"
+    #     pat.grade = 10
+    #     pat.save
+    #     sam.name = "Sam"
+    #     sam.grade = 10
+    #     sam.save
+    #     jess.name = "Jess"
+    #     jess.grade = 10
+    #     jess.save
+
+    #     tenth_grade = Student.all_students_in_grade_X
+    #     expect(tenth_grade.size).to eq(3)
+    #   end
+    # end
+    
+    describe '.all_students_in_grade(x)' do
       it 'returns an array of all students in a given grade X' do
+        
         pat.name = "Pat"
         pat.grade = 10
         pat.save
@@ -182,7 +201,7 @@ describe Student do
         jess.grade = 10
         jess.save
 
-        tenth_grade = Student.all_students_in_grade_X
+        tenth_grade = Student.all_students_in_grade(10)
         expect(tenth_grade.size).to eq(3)
       end
     end
